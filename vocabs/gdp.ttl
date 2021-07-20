@@ -44,3 +44,12 @@ gdp:edvp a gdp:DatasetFamily ;
 
 gdp:towns-and-high-streets a gdp:DatasetFamily ;
   rdfs:label "Towns & High Streets" .
+
+gdp:climate-change a gdp:DatasetFamily ;
+  rdfs:label "Climate Change" .
+
+gdp:covid-19 a gdp:DatasetFamily ;
+  rdfs:label "COVID-19" .
+
+gdp:homelessness a gdp:DatasetFamily ;
+  rdfs:label "Homelessness" .
