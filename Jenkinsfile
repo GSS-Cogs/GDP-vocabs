@@ -68,9 +68,8 @@ pipeline {
                         }
                         // Standardise the format so we can augment it if necessary
                         def standardisedFormatOutputFilePath = "${WORKSPACE}/${fileFriendlyIdentifier}.standard.out.ttl"
-                        sh "sparql --data \"${localFilePath}\" 'CONSTRUCT {?s ?p ?o.} WHERE {?s ?p ?o.}' > \"${standardisedFormatOutputFilePath}\""
-                        
-                        sh "sparql --data \"${standardisedFormatOutputFilePath}\" 'SELECT (COUNT(*) as ?numTriples) WHERE { ?s ?p ?o. }'"
+                        sh "riot --output=turtle '${localFilePath}' > '${standardisedFormatOutputFilePath}'"
+                        sh "riot --count '${standardisedFormatOutputFilePath}'"
 
                         if (vocab.filter != null) {
                             for (filterQueryFilePath in vocab.filter) {
@@ -78,7 +77,7 @@ pipeline {
                                 // N.B. **Overwrites** standardised.format.ttl with filtered data.
                                 sh "sparql --data \"${standardisedFormatOutputFilePath}\" --query \"${WORKSPACE}/${filterQueryFilePath}\" > temp.ttl"
                                 sh "cat temp.ttl > \"${standardisedFormatOutputFilePath}\""
-                                sh "sparql --data \"${standardisedFormatOutputFilePath}\" 'SELECT (COUNT(*) as ?numTriples) WHERE { ?s ?p ?o. }'"
+                                sh "riot --count '${standardisedFormatOutputFilePath}'"
                             }
                         }
 
@@ -86,7 +85,15 @@ pipeline {
                             for (augmentationQueryFilePath in vocab.augment) {
                                 echo "Augmenting with ${augmentationQueryFilePath}"
                                 sh "sparql --data \"${standardisedFormatOutputFilePath}\" --query \"${WORKSPACE}/${augmentationQueryFilePath}\" >> \"${standardisedFormatOutputFilePath}\""
-                                sh "sparql --data \"${standardisedFormatOutputFilePath}\" 'SELECT (COUNT(*) as ?numTriples) WHERE { ?s ?p ?o. }'"
+                                sh "riot --count '${standardisedFormatOutputFilePath}'"
+                            }
+                        }
+
+                        if (vocab.update != null) {
+                            for (updateQueryFilePath in vocab.update) {
+                                echo "Updating with ${updateQueryFilePath}"
+                                sh "update --data='${standardisedFormatOutputFilePath}' --update='${WORKSPACE}/${augmentationQueryFilePath}' --dump | riot --syntax=ntriples --output=turtle > '${standardisedFormatOutputFilePath}'"
+                                sh "riot --count '${standardisedFormatOutputFilePath}'"
                             }
                         }
 

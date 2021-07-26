@@ -176,7 +176,10 @@
   }, {
     "src": "vocabs/sic-2007-labels.ttl",
     "graph": "http://business.data.gov.uk/companies/sources/vocab/sic-2007-labels",
-    "format": "text/turtle"
+    "format": "text/turtle",
+    "update": [
+      "updates/fix-sic-notations.sparql"
+    ]
   }, {
     "src": "https://op.europa.eu/o/opportal-service/euvoc-download-handler?cellarURI=http%3A%2F%2Fpublications.europa.eu%2Fresource%2Fcellar%2F7180b976-bc48-11ea-811c-01aa75ed71a1.0001.03%2FDOC_1&fileName=nuts-skos-ap-eu.rdf",
     "format": "application/rdf+xml",
