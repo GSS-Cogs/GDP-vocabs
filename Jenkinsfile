@@ -92,7 +92,7 @@ pipeline {
                         if (vocab.update != null) {
                             for (updateQueryFilePath in vocab.update) {
                                 echo "Updating with ${updateQueryFilePath}"
-                                sh "update --data='${standardisedFormatOutputFilePath}' --update='${WORKSPACE}/${augmentationQueryFilePath}' --dump | riot --syntax=ntriples --output=turtle > '${standardisedFormatOutputFilePath}'"
+                                sh "update --data='${standardisedFormatOutputFilePath}' --update='${WORKSPACE}/${updateQueryFilePath}' --dump | riot --syntax=ntriples --output=turtle > '${standardisedFormatOutputFilePath}'"
                                 sh "riot --count '${standardisedFormatOutputFilePath}'"
                             }
                         }
