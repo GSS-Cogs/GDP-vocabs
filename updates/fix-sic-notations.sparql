@@ -1,13 +1,8 @@
-PREFIX skos:  <http://www.w3.org/2004/02/skos/core#>
 PREFIX sic:   <http://business.data.gov.uk/companies/def/sic-2007/>
-
+PREFIX skos:  <http://www.w3.org/2004/02/skos/core#>
 
 DELETE {
     ?c skos:notation ?n
-}
-
-INSERT {
-    ?c skos:notation ?n
-} WHERE {
-    ?s sic:sicNotation ?n
+} where {
+    ?c sic:condensedNotation ?n
 }
