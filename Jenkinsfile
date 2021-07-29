@@ -92,15 +92,13 @@ pipeline {
                         if (vocab.update != null) {
                             for (updateQueryFilePath in vocab.update) {
                                 echo "Updating with ${updateQueryFilePath}"
-                                sh "update --data='${standardisedFormatOutputFilePath}' --update='${WORKSPACE}/${updateQueryFilePath}' --dump > temp.nt"
-                                sh "riot --syntax=ntriples --output=turtle temp.nt > '${standardisedFormatOutputFilePath}'"
-                                sh "rm temp.nt"
+                                sh "update --data='${standardisedFormatOutputFilePath}' --update='${WORKSPACE}/${updateQueryFilePath}' --dump > '${standardisedFormatOutputFilePath}'"
                                 sh "riot --count '${standardisedFormatOutputFilePath}'"
                             }
                         }
 
                         pmd.drafter.deleteGraph(id, graph)
-                        pmd.drafter.addData(id, standardisedFormatOutputFilePath, "text/turtle", "UTF-8", graph)
+                        pmd.drafter.addData(id, standardisedFormatOutputFilePath, "application/n-triples", "UTF-8", graph)
 
                         if (vocab.conceptSchemes != null){
                             for (conceptScheme in vocab.conceptSchemes) {
