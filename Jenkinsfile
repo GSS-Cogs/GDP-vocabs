@@ -67,16 +67,16 @@ pipeline {
                             localFilePath = "${WORKSPACE}/${vocab.src}"
                         }
                         // Standardise the format so we can augment it if necessary
-                        def standardisedFormatOutputFilePath = "${WORKSPACE}/${fileFriendlyIdentifier}.standard.out.ttl"
-                        sh "riot --output=turtle '${localFilePath}' > '${standardisedFormatOutputFilePath}'"
+                        def standardisedFormatOutputFilePath = "${WORKSPACE}/${fileFriendlyIdentifier}.standard.out.nt"
+                        sh "riot --output=nt '${localFilePath}' > '${standardisedFormatOutputFilePath}'"
                         sh "riot --count '${standardisedFormatOutputFilePath}'"
 
                         if (vocab.filter != null) {
                             for (filterQueryFilePath in vocab.filter) {
                                 echo "Filtering with ${filterQueryFilePath}"
                                 // N.B. **Overwrites** standardised.format.ttl with filtered data.
-                                sh "sparql --data \"${standardisedFormatOutputFilePath}\" --query \"${WORKSPACE}/${filterQueryFilePath}\" > temp.ttl"
-                                sh "cat temp.ttl > \"${standardisedFormatOutputFilePath}\""
+                                sh "sparql --results nt --data \"${standardisedFormatOutputFilePath}\" --query \"${WORKSPACE}/${filterQueryFilePath}\" > temp.nt"
+                                sh "cat temp.nt > \"${standardisedFormatOutputFilePath}\""
                                 sh "riot --count '${standardisedFormatOutputFilePath}'"
                             }
                         }
@@ -84,7 +84,7 @@ pipeline {
                         if (vocab.augment != null) {
                             for (augmentationQueryFilePath in vocab.augment) {
                                 echo "Augmenting with ${augmentationQueryFilePath}"
-                                sh "sparql --data \"${standardisedFormatOutputFilePath}\" --query \"${WORKSPACE}/${augmentationQueryFilePath}\" >> \"${standardisedFormatOutputFilePath}\""
+                                sh "sparql --results nt --data \"${standardisedFormatOutputFilePath}\" --query \"${WORKSPACE}/${augmentationQueryFilePath}\" >> \"${standardisedFormatOutputFilePath}\""
                                 sh "riot --count '${standardisedFormatOutputFilePath}'"
                             }
                         }
@@ -92,15 +92,13 @@ pipeline {
                         if (vocab.update != null) {
                             for (updateQueryFilePath in vocab.update) {
                                 echo "Updating with ${updateQueryFilePath}"
-                                sh "update --data='${standardisedFormatOutputFilePath}' --update='${WORKSPACE}/${updateQueryFilePath}' --dump > temp.nt"
-                                sh "riot --syntax=ntriples --output=turtle temp.nt > '${standardisedFormatOutputFilePath}'"
-                                sh "rm temp.nt"
+                                sh "update --data='${standardisedFormatOutputFilePath}' --update='${WORKSPACE}/${updateQueryFilePath}' --dump > '${standardisedFormatOutputFilePath}'"
                                 sh "riot --count '${standardisedFormatOutputFilePath}'"
                             }
                         }
 
                         pmd.drafter.deleteGraph(id, graph)
-                        pmd.drafter.addData(id, standardisedFormatOutputFilePath, "text/turtle", "UTF-8", graph)
+                        pmd.drafter.addData(id, standardisedFormatOutputFilePath, "application/n-triples", "UTF-8", graph)
 
                         if (vocab.conceptSchemes != null){
                             for (conceptScheme in vocab.conceptSchemes) {
