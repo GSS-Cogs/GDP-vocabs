@@ -20,7 +20,7 @@
 
 <http://www.opendatacommons.org/licenses/pddl/1.0/> a dct:LicenseDocument ;
   rdfs:label "Open Data Commons Public Domain Dedication and License (PDDL) v1.0" ;
-  rdfs:comment "An Open Data Commons 1.0 Licence" ;
+  rdfs:comment "The Open Data Commons 1.0 Licence" ;
 .
 
 <https://spdx.org/licenses/EUPL-1.1.html> a dct:LicenseDocument ;
