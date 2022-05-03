@@ -12,3 +12,23 @@
   rdfs:label "MIT" ;
   rdfs:comment "The MIT License" ;
 .
+
+<https://creativecommons.org/licenses/by/4.0/> a dct:LicenseDocument ;
+  rdfs:label "Attribution 4.0 International (CC BY 4.0)" ;
+  rdfs:comment "The Creative Commons Attribution 4.0 Licence" ;
+.
+
+<http://www.opendatacommons.org/licenses/pddl/1.0/> a dct:LicenseDocument ;
+  rdfs:label "Open Data Commons Public Domain Dedication and License (PDDL) v1.0" ;
+  rdfs:comment "An Open Data Commons 1.0 Licence" ;
+.
+
+<https://spdx.org/licenses/EUPL-1.1.html> a dct:LicenseDocument ;
+  rdfs:label "European Union Public Licence v1.1" ;
+  rdfs:comment "The European Union Public Licence v1.1" ;
+.
+
+<https://joinup.ec.europa.eu/collection/eupl/eupl-text-eupl-12> a dct:LicenseDocument ;
+  rdfs:label "European Union Public Licence v1.2" ;
+  rdfs:comment "The European Union Public Licence v1.2" ;
+.
