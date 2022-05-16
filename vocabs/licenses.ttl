@@ -13,11 +13,6 @@
   rdfs:comment "The MIT License" ;
 .
 
-<https://creativecommons.org/licenses/by/4.0/> a dct:LicenseDocument ;
-  rdfs:label "Attribution 4.0 International (CC BY 4.0)" ;
-  rdfs:comment "The Creative Commons Attribution 4.0 Licence" ;
-.
-
 <http://www.opendatacommons.org/licenses/pddl/1.0/> a dct:LicenseDocument ;
   rdfs:label "Open Data Commons Public Domain Dedication and License (PDDL) v1.0" ;
   rdfs:comment "The Open Data Commons 1.0 Licence" ;
@@ -31,4 +26,167 @@
 <https://joinup.ec.europa.eu/collection/eupl/eupl-text-eupl-12> a dct:LicenseDocument ;
   rdfs:label "European Union Public Licence v1.2" ;
   rdfs:comment "The European Union Public Licence v1.2" ;
+.
+
+# Creative commmons: BY
+
+<https://creativecommons.org/licenses/by/1.0/> a dct:LicenseDocument ;
+  rdfs:label "Attribution 1.0 Generic (CC BY 1.0)" ;
+  rdfs:comment "The Creative Commons Attribution 1.0 Licence" ;
+.
+
+<https://creativecommons.org/licenses/by/2.0/> a dct:LicenseDocument ;
+  rdfs:label "Attribution 2.0 Generic (CC BY 2.0)" ;
+  rdfs:comment "The Creative Commons Attribution 2.0 Licence" ;
+.
+
+<https://creativecommons.org/licenses/by/2.5/> a dct:LicenseDocument ;
+  rdfs:label "Attribution 2.5 Generic (CC BY 2.5)" ;
+  rdfs:comment "The Creative Commons Attribution 2.5 Licence" ;
+.
+
+<https://creativecommons.org/licenses/by/3.0/> a dct:LicenseDocument ;
+  rdfs:label "Attribution 3.0 Unported (CC BY 3.0)" ;
+  rdfs:comment "The Creative Commons Attribution 3.0 Licence" ;
+.
+
+<https://creativecommons.org/licenses/by/4.0/> a dct:LicenseDocument ;
+  rdfs:label "Attribution 4.0 International (CC BY 4.0)" ;
+  rdfs:comment "The Creative Commons Attribution 4.0 Licence" ;
+.
+
+# Creative commmons: BY-SA
+
+<https://creativecommons.org/licenses/by-sa/1.0/> a dct:LicenseDocument ;
+  rdfs:label "Attribution-ShareAlike 1.0 Generic (CC BY-SA 1.0)" ;
+  rdfs:comment "The Creative Commons Attribution-ShareAlike 1.0 Licence" ;
+.
+
+<https://creativecommons.org/licenses/by-sa/2.0/> a dct:LicenseDocument ;
+  rdfs:label "Attribution-ShareAlike 2.0 Generic (CC BY-SA 2.0)" ;
+  rdfs:comment "The Creative Commons Attribution-ShareAlike 2.0 Licence" ;
+.
+
+<https://creativecommons.org/licenses/by-sa/2.5/> a dct:LicenseDocument ;
+  rdfs:label "Attribution-ShareAlike 2.5 Generic (CC BY-SA 2.5)" ;
+  rdfs:comment "The Creative Commons Attribution-ShareAlike 2.5 Licence" ;
+.
+
+<https://creativecommons.org/licenses/by-sa/3.0/> a dct:LicenseDocument ;
+  rdfs:label "Attribution-ShareAlike 3.0 Unported (CC BY-SA 3.0)" ;
+  rdfs:comment "The Creative Commons Attribution-ShareAlike 3.0 Licence" ;
+.
+
+<https://creativecommons.org/licenses/by-sa/4.0/> a dct:LicenseDocument ;
+  rdfs:label "Attribution-ShareAlike 4.0 International (CC BY-SA 4.0)" ;
+  rdfs:comment "The Creative Commons Attribution-ShareAlike 4.0 Licence" ;
+.
+
+# Creative commmons: BY-ND
+
+<https://creativecommons.org/licenses/by-nd/1.0/> a dct:LicenseDocument ;
+  rdfs:label "Attribution-NoDerivs 1.0 Generic (CC BY-ND 1.0)" ;
+  rdfs:comment "The Creative Commons Attribution-NoDerivs 1.0 Licence" ;
+.
+
+<https://creativecommons.org/licenses/by-nd/2.0/> a dct:LicenseDocument ;
+  rdfs:label "Attribution-NoDerivs 2.0 Generic (CC BY-ND 2.0)" ;
+  rdfs:comment "The Creative Commons Attribution-NoDerivs 2.0 Licence" ;
+.
+
+<https://creativecommons.org/licenses/by-nd/2.5/> a dct:LicenseDocument ;
+  rdfs:label "Attribution-NoDerivs 2.5 Generic (CC BY-ND 2.5)" ;
+  rdfs:comment "The Creative Commons Attribution-NoDerivs 2.5 Licence" ;
+.
+
+<https://creativecommons.org/licenses/by-nd/3.0/> a dct:LicenseDocument ;
+  rdfs:label "Attribution-NoDerivs 3.0 Unported (CC BY-ND 3.0)" ;
+  rdfs:comment "The Creative Commons Attribution-NoDerivs 3.0 Licence" ;
+.
+
+<https://creativecommons.org/licenses/by-nd/4.0/> a dct:LicenseDocument ;
+  rdfs:label "Attribution-NoDerivatives 4.0 International (CC BY-ND 4.0)" ;
+  rdfs:comment "The Creative Commons Attribution-NoDerivatives 4.0 Licence" ;
+.
+
+# Creative commmons: BY-NC
+
+<https://creativecommons.org/licenses/by-nc/1.0/> a dct:LicenseDocument ;
+  rdfs:label "Attribution-NonCommercial 1.0 Generic (CC BY-NC 1.0)" ;
+  rdfs:comment "The Creative Commons Attribution-NonCommercial 1.0 Licence" ;
+.
+
+<https://creativecommons.org/licenses/by-nc/2.0/> a dct:LicenseDocument ;
+  rdfs:label "Attribution-NonCommercial 2.0 Generic (CC BY-NC 2.0)" ;
+  rdfs:comment "The Creative Commons Attribution-NonCommercial 2.0 Licence" ;
+.
+
+<https://creativecommons.org/licenses/by-nc/2.5/> a dct:LicenseDocument ;
+  rdfs:label "Attribution-NonCommercial 2.5 Generic (CC BY-NC 2.5)" ;
+  rdfs:comment "The Creative Commons Attribution-NonCommercial 2.5 Licence" ;
+.
+
+<https://creativecommons.org/licenses/by-nc/3.0/> a dct:LicenseDocument ;
+  rdfs:label "Attribution-NonCommercial 3.0 Unported (CC BY-NC 3.0)" ;
+  rdfs:comment "The Creative Commons Attribution-NonCommercial 3.0 Licence" ;
+.
+
+<https://creativecommons.org/licenses/by-nc/4.0/> a dct:LicenseDocument ;
+  rdfs:label "Attribution-NonCommercial 4.0 International (CC BY-NC 4.0)" ;
+  rdfs:comment "The Creative Commons Attribution-NonCommercial 4.0 Licence" ;
+.
+
+# Creative commmons: BY-NC-SA
+
+<https://creativecommons.org/licenses/by-nc-sa/1.0/> a dct:LicenseDocument ;
+  rdfs:label "Attribution-NonCommercial-ShareAlike 1.0 Generic (CC BY-NC-SA 1.0)" ;
+  rdfs:comment "The Creative Commons Attribution-NonCommercial-ShareAlike 1.0 Licence" ;
+.
+
+<https://creativecommons.org/licenses/by-nc-sa/2.0/> a dct:LicenseDocument ;
+  rdfs:label "Attribution-NonCommercial-ShareAlike 2.0 Generic (CC BY-NC-SA 2.0)" ;
+  rdfs:comment "The Creative Commons Attribution-NonCommercial-ShareAlike 2.0 Licence" ;
+.
+
+<https://creativecommons.org/licenses/by-nc-sa/2.5/> a dct:LicenseDocument ;
+  rdfs:label "Attribution-NonCommercial-ShareAlike 2.5 Generic (CC BY-NC-SA 2.5)" ;
+  rdfs:comment "The Creative Commons Attribution-NonCommercial-ShareAlike 2.5 Licence" ;
+.
+
+<https://creativecommons.org/licenses/by-nc-sa/3.0/> a dct:LicenseDocument ;
+  rdfs:label "Attribution-NonCommercial-ShareAlike 3.0 Unported (CC BY-NC-SA 3.0)" ;
+  rdfs:comment "The Creative Commons Attribution-NonCommercial-ShareAlike 3.0 Licence" ;
+.
+
+<https://creativecommons.org/licenses/by-nc-sa/4.0/> a dct:LicenseDocument ;
+  rdfs:label "Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0)" ;
+  rdfs:comment "The Creative Commons Attribution-NonCommercial-ShareAlike 4.0 Licence" ;
+.
+
+
+# Creative commmons: BY-NC-ND
+
+<https://creativecommons.org/licenses/by-nc-nd/1.0/> a dct:LicenseDocument ;
+  rdfs:label "Attribution-NonCommercial-NoDerivative 1.0 Generic (CC BY-NC-ND 1.0)" ;
+  rdfs:comment "The Creative Commons Attribution-NonCommercial-NoDerivative 1.0 Licence" ;
+.
+
+<https://creativecommons.org/licenses/by-nc-nd/2.0/> a dct:LicenseDocument ;
+  rdfs:label "Attribution-NonCommercial-NoDerivative 2.0 Generic (CC BY-NC-ND 2.0)" ;
+  rdfs:comment "The Creative Commons Attribution-NonCommercial-NoDerivative 2.0 Licence" ;
+.
+
+<https://creativecommons.org/licenses/by-nc-nd/2.5/> a dct:LicenseDocument ;
+  rdfs:label "Attribution-NonCommercial-NoDerivative 2.5 Generic (CC BY-NC-ND 2.5)" ;
+  rdfs:comment "The Creative Commons Attribution-NonCommercial-NoDerivative 2.5 Licence" ;
+.
+
+<https://creativecommons.org/licenses/by-nc-nd/3.0/> a dct:LicenseDocument ;
+  rdfs:label "Attribution-NonCommercial-NoDerivative 3.0 Unported (CC BY-NC-ND 3.0)" ;
+  rdfs:comment "The Creative Commons Attribution-NonCommercial-NoDerivative 3.0 Licence" ;
+.
+
+<https://creativecommons.org/licenses/by-nc-nd/4.0/> a dct:LicenseDocument ;
+  rdfs:label "Attribution-NonCommercial-NoDerivative 4.0 International (CC BY-NC-ND 4.0)" ;
+  rdfs:comment "The Creative Commons Attribution-NonCommercial-NoDerivative 4.0 Licence" ;
 .
