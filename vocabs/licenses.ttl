@@ -3,10 +3,7 @@
 @prefix gdp:   <http://gss-data.org.uk/def/gdp#> .
 @prefix dct:   <http://dublincore.org/2012/06/14/dcterms#> .
 
-<http://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/> a dct:LicenseDocument ;
-  rdfs:label "OGLv3" ;
-  rdfs:comment "Open Government Licence for public sector information" ;
-.
+# Individual Licences
 
 <https://opensource.org/licenses/mit-license.php> a dct:LicenseDocument ;
   rdfs:label "MIT" ;
@@ -18,6 +15,28 @@
   rdfs:comment "The Open Data Commons 1.0 Licence" ;
 .
 
+<http://id.loc.gov/about/> a dct:LicenseDocument ;
+  rdfs:label "Library of Congress Public Domain" ;
+  rdfs:comment "Library of Congress Public Domain Licence" ;
+.
+
+<http://creativecommons.org/publicdomain/zero/1.0/> a dct:LicenseDocument ;
+  rdfs:label "Creative Commons Public Domain (CC0)" ;
+  rdfs:comment "The Creative Commons Public Domain Licence" ;
+.
+
+<http://bbcarchdev.github.io/licences/dps/1.0#id> a dct:LicenseDocument ;
+  rdfs:label "Digital Public Space Licence, version 1.0" ;
+  rdfs:comment "Digital Public Space Licence, version 1.0" ;
+.
+
+<https://choosealicense.com/no-permission/> a dct:LicenseDocument ;
+  rdfs:label "No License" ;
+  rdfs:comment "No License" ;
+.
+
+# European Union Public Licences
+
 <https://spdx.org/licenses/EUPL-1.1.html> a dct:LicenseDocument ;
   rdfs:label "European Union Public Licence v1.1" ;
   rdfs:comment "The European Union Public Licence v1.1" ;
@@ -26,6 +45,23 @@
 <https://joinup.ec.europa.eu/collection/eupl/eupl-text-eupl-12> a dct:LicenseDocument ;
   rdfs:label "European Union Public Licence v1.2" ;
   rdfs:comment "The European Union Public Licence v1.2" ;
+.
+
+# Open Government Licences
+
+<http://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/> a dct:LicenseDocument ;
+  rdfs:label "OGLv3" ;
+  rdfs:comment "Open Government Licence for public sector information, version 3" ;
+.
+
+<http://www.nationalarchives.gov.uk/doc/open-government-licence/version/2/> a dct:LicenseDocument ;
+  rdfs:label "OGLv2" ;
+  rdfs:comment "Open Government Licence for public sector information, version 2" ;
+.
+
+<http://www.nationalarchives.gov.uk/doc/open-government-licence/version/1/> a dct:LicenseDocument ;
+  rdfs:label "OGLv1" ;
+  rdfs:comment "Open Government Licence for public sector information, version 1" ;
 .
 
 # Creative commmons: BY
